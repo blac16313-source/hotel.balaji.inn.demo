@@ -4,10 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hotel Balaji Inn | Ayodhya Bypass, Bhopal</title>
-
-<meta name="description"
-content="Hotel Balaji Inn, Ayodhya Bypass, Bhopal. Comfortable AC rooms, free Wi-Fi, parking, room service and convenient access to Minal Gate.">
+<title>Hotel Balaji Inn | Bhopal</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,25 +13,20 @@ content="Hotel Balaji Inn, Ayodhya Bypass, Bhopal. Comfortable AC rooms, free Wi
 
 <style>
 
-:root{
-  --green:#183f32;
-  --green-dark:#102c24;
-  --green-light:#2e6653;
-  --gold:#b58a4b;
-  --gold-light:#d5b477;
-  --cream:#f7f3ec;
-  --cream-dark:#ece5d8;
-  --white:#ffffff;
-  --black:#171916;
-  --muted:#74766f;
-  --border:rgba(24,63,50,.12);
-  --shadow:0 25px 70px rgba(18,38,30,.12);
-}
-
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --green:#173f32;
+  --green2:#285b4a;
+  --cream:#f7f3eb;
+  --gold:#b58a4b;
+  --dark:#171916;
+  --muted:#70736d;
+  --white:#fff;
 }
 
 html{
@@ -43,1208 +35,478 @@ html{
 
 body{
   font-family:"DM Sans",sans-serif;
+  color:var(--dark);
   background:var(--cream);
-  color:var(--black);
-  overflow-x:hidden;
+  line-height:1.6;
 }
 
 img{
-  display:block;
   width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 a{
-  color:inherit;
   text-decoration:none;
-}
-
-button{
-  font-family:inherit;
+  color:inherit;
 }
 
 .container{
-  width:min(1180px,calc(100% - 40px));
+  width:min(1120px,92%);
   margin:auto;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAV */
 
-.navbar{
+nav{
   position:absolute;
   top:0;
   left:0;
   width:100%;
-  z-index:20;
+  z-index:10;
+  padding:24px 0;
   color:white;
 }
 
 .nav-inner{
-  min-height:90px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:30px;
+  align-items:center;
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.logo-mark{
-  width:42px;
-  height:42px;
-  border:1px solid rgba(255,255,255,.6);
-  border-radius:50%;
-  display:grid;
-  place-items:center;
   font-family:"Playfair Display",serif;
-  font-size:18px;
-}
-
-.logo-text{
-  line-height:1.05;
-}
-
-.logo-text strong{
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:20px;
+  font-size:24px;
   font-weight:600;
-  letter-spacing:.02em;
 }
 
-.logo-text span{
+.logo span{
   display:block;
-  margin-top:4px;
+  font-family:"DM Sans",sans-serif;
   font-size:9px;
-  letter-spacing:.22em;
+  letter-spacing:3px;
   text-transform:uppercase;
-  opacity:.7;
+  opacity:.8;
 }
 
 .nav-links{
   display:flex;
-  align-items:center;
   gap:28px;
-  font-size:13px;
-  font-weight:500;
-}
-
-.nav-links a{
-  opacity:.88;
-  transition:.25s;
+  align-items:center;
+  font-size:14px;
 }
 
 .nav-links a:hover{
-  opacity:1;
-  color:var(--gold-light);
+  opacity:.7;
 }
 
-.nav-book{
-  padding:12px 19px;
-  border:1px solid rgba(255,255,255,.55);
-  border-radius:999px;
-  transition:.25s;
+.nav-btn{
+  padding:11px 18px;
+  border:1px solid rgba(255,255,255,.6);
+  border-radius:30px;
 }
 
-.nav-book:hover{
-  background:white;
-  color:var(--green);
-}
-
-.menu-btn{
-  display:none;
-  background:none;
-  border:0;
-  color:white;
-  font-size:26px;
-  cursor:pointer;
-}
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
-  position:relative;
   min-height:720px;
+  position:relative;
   display:flex;
-  align-items:flex-end;
-  overflow:hidden;
+  align-items:center;
   color:white;
-  background:#1b3029;
+  overflow:hidden;
 }
 
-.hero-image{
+.hero-bg{
   position:absolute;
   inset:0;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(10,29,23,.82) 0%,
-      rgba(10,29,23,.57) 45%,
-      rgba(10,29,23,.25) 100%
-    ),
-    linear-gradient(
-      0deg,
-      rgba(10,29,23,.75) 0%,
-      transparent 55%
-    ),
-    url("images/hero.jpg");
-
-  background-size:cover;
-  background-position:center;
-  transform:scale(1.02);
+  background:
+    linear-gradient(90deg,rgba(10,28,22,.85),rgba(10,28,22,.35)),
+    url("images/hero.jpg") center/cover;
 }
 
 .hero-content{
   position:relative;
   z-index:2;
-  width:100%;
-  padding:0 0 95px;
+  max-width:700px;
 }
 
 .eyebrow{
-  display:flex;
-  align-items:center;
-  gap:12px;
   text-transform:uppercase;
-  letter-spacing:.2em;
-  font-size:11px;
-  font-weight:600;
-  color:#e5c58f;
-  margin-bottom:20px;
-}
-
-.eyebrow::before{
-  content:"";
-  width:35px;
-  height:1px;
-  background:currentColor;
+  letter-spacing:3px;
+  font-size:12px;
+  margin-bottom:18px;
+  color:#e1c28f;
 }
 
 .hero h1{
-  max-width:760px;
   font-family:"Playfair Display",serif;
-  font-size:clamp(54px,8vw,96px);
-  line-height:.94;
-  font-weight:500;
-  letter-spacing:-.045em;
+  font-size:clamp(48px,7vw,82px);
+  line-height:1;
+  margin-bottom:24px;
 }
 
-.hero h1 span{
-  display:block;
-  color:#e2c58e;
+.hero p{
+  max-width:570px;
+  font-size:17px;
+  opacity:.9;
+  margin-bottom:32px;
 }
 
-.hero-description{
-  max-width:580px;
-  margin-top:28px;
-  color:rgba(255,255,255,.82);
-  font-size:16px;
-  line-height:1.8;
-}
-
-.hero-actions{
-  margin-top:34px;
+.buttons{
   display:flex;
-  flex-wrap:wrap;
   gap:12px;
+  flex-wrap:wrap;
 }
 
 .btn{
-  min-height:50px;
-  padding:0 24px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:999px;
-  font-size:13px;
+  padding:14px 22px;
+  border-radius:5px;
   font-weight:600;
-  transition:.25s;
-  cursor:pointer;
+  font-size:14px;
 }
 
 .btn-primary{
-  background:#d5b477;
-  color:#142c24;
-}
-
-.btn-primary:hover{
-  transform:translateY(-2px);
-  background:#e3c58e;
-}
-
-.btn-outline{
-  border:1px solid rgba(255,255,255,.45);
-  color:white;
-  background:rgba(255,255,255,.04);
-  backdrop-filter:blur(8px);
-}
-
-.btn-outline:hover{
   background:white;
   color:var(--green);
 }
 
-.hero-bottom{
-  position:absolute;
-  z-index:3;
-  bottom:0;
-  left:0;
-  width:100%;
-  border-top:1px solid rgba(255,255,255,.18);
-}
-
-.hero-info{
-  min-height:74px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-  color:rgba(255,255,255,.8);
-  font-size:12px;
-}
-
-.hero-info-item{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.hero-info-item strong{
+.btn-outline{
+  border:1px solid rgba(255,255,255,.6);
   color:white;
-  font-weight:600;
 }
 
-/* =========================
-   INTRO
-========================= */
+/* INTRO */
 
 .intro{
-  padding:110px 0;
-  background:white;
-}
-
-.intro-grid{
-  display:grid;
-  grid-template-columns:1fr 1.15fr;
-  gap:90px;
-  align-items:center;
+  padding:90px 0;
+  text-align:center;
 }
 
 .section-label{
   color:var(--gold);
   text-transform:uppercase;
-  letter-spacing:.18em;
-  font-size:10px;
+  letter-spacing:3px;
+  font-size:11px;
   font-weight:700;
-  margin-bottom:17px;
+  margin-bottom:12px;
 }
 
-.intro h2{
+.intro h2,
+.section-head h2{
   font-family:"Playfair Display",serif;
-  font-size:clamp(38px,5vw,62px);
-  line-height:1;
-  font-weight:500;
-  letter-spacing:-.035em;
+  font-size:42px;
+  color:var(--green);
+  margin-bottom:18px;
 }
 
-.intro-copy{
+.intro p{
+  max-width:700px;
+  margin:auto;
   color:var(--muted);
-  font-size:15px;
-  line-height:1.9;
 }
 
-.intro-copy p + p{
-  margin-top:18px;
-}
-
-.intro-card{
-  margin-top:30px;
-  padding:22px;
-  border-left:2px solid var(--gold);
-  background:var(--cream);
-}
-
-.intro-card strong{
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:21px;
-  margin-bottom:6px;
-}
-
-.intro-card span{
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* =========================
-   ROOMS
-========================= */
+/* ROOMS */
 
 .rooms{
-  padding:110px 0;
-  background:var(--cream);
+  padding:30px 0 100px;
 }
 
-.section-heading{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:40px;
-  margin-bottom:50px;
+.section-head{
+  margin-bottom:35px;
 }
 
-.section-heading h2{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(38px,5vw,60px);
-  line-height:1;
-  font-weight:500;
-  letter-spacing:-.035em;
-}
-
-.section-heading p{
-  max-width:410px;
+.section-head p{
   color:var(--muted);
-  font-size:14px;
-  line-height:1.8;
 }
 
-.rooms-grid{
+.room-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:25px;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
-.room-card{
+.room{
   background:white;
-  border-radius:24px;
+  border-radius:10px;
   overflow:hidden;
-  box-shadow:0 12px 45px rgba(20,45,35,.07);
+  box-shadow:0 15px 45px rgba(0,0,0,.07);
 }
 
-.room-image{
-  height:370px;
-  position:relative;
-  overflow:hidden;
-  background:#dcd5c8;
-}
-
-.room-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform .7s ease;
-}
-
-.room-card:hover .room-image img{
-  transform:scale(1.04);
-}
-
-.room-tag{
-  position:absolute;
-  top:18px;
-  left:18px;
-  padding:8px 13px;
-  border-radius:999px;
-  background:rgba(255,255,255,.92);
-  color:var(--green);
-  font-size:10px;
-  font-weight:700;
-  text-transform:uppercase;
-  letter-spacing:.1em;
+.room-img{
+  height:260px;
 }
 
 .room-body{
-  padding:27px;
+  padding:25px;
 }
 
 .room-body h3{
   font-family:"Playfair Display",serif;
-  font-size:29px;
-  font-weight:500;
-  margin-bottom:9px;
+  font-size:25px;
+  color:var(--green);
+  margin-bottom:8px;
 }
 
 .room-body p{
   color:var(--muted);
-  font-size:13px;
-  line-height:1.75;
-  max-width:520px;
+  font-size:14px;
+  margin-bottom:15px;
 }
 
-.room-features{
+.features{
   display:flex;
   flex-wrap:wrap;
-  gap:8px;
-  margin-top:20px;
+  gap:7px;
 }
 
-.room-features span{
-  padding:8px 11px;
-  background:var(--cream);
-  border-radius:7px;
-  color:#555b55;
-  font-size:10px;
-  font-weight:600;
+.features span{
+  background:#f2eee6;
+  padding:6px 9px;
+  border-radius:20px;
+  font-size:11px;
 }
 
-/* =========================
-   AMENITIES
-========================= */
+/* ABOUT */
 
-.amenities{
-  padding:110px 0;
+.about{
+  padding:100px 0;
   background:var(--green);
   color:white;
 }
 
-.amenities .section-label{
-  color:var(--gold-light);
-}
-
-.amenities-head{
-  max-width:680px;
-}
-
-.amenities h2{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(40px,5vw,62px);
-  line-height:1;
-  font-weight:500;
-}
-
-.amenities-intro{
-  margin-top:20px;
-  color:rgba(255,255,255,.68);
-  font-size:14px;
-  line-height:1.8;
-}
-
-.amenities-grid{
-  margin-top:55px;
+.about-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  border-top:1px solid rgba(255,255,255,.14);
-  border-left:1px solid rgba(255,255,255,.14);
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
 }
 
-.amenity{
-  min-height:170px;
-  padding:27px;
-  border-right:1px solid rgba(255,255,255,.14);
-  border-bottom:1px solid rgba(255,255,255,.14);
+.about-img{
+  height:470px;
+  border-radius:8px;
+  overflow:hidden;
 }
 
-.amenity-number{
-  font-size:11px;
-  color:var(--gold-light);
+.about h2{
+  font-family:"Playfair Display",serif;
+  font-size:44px;
+  margin-bottom:20px;
+}
+
+.about p{
+  color:rgba(255,255,255,.75);
   margin-bottom:25px;
 }
 
-.amenity h3{
-  font-family:"Playfair Display",serif;
-  font-size:21px;
-  font-weight:500;
-  margin-bottom:8px;
+.about-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
 }
 
-.amenity p{
-  color:rgba(255,255,255,.58);
-  font-size:12px;
-  line-height:1.7;
+.about-list div{
+  border-top:1px solid rgba(255,255,255,.15);
+  padding-top:12px;
+  font-size:14px;
 }
 
-/* =========================
-   GALLERY
-========================= */
+/* GALLERY */
 
 .gallery{
-  padding:110px 0;
-  background:white;
+  padding:100px 0;
 }
 
 .gallery-grid{
   display:grid;
-  grid-template-columns:1.2fr .8fr .8fr;
-  grid-template-rows:250px 250px;
-  gap:14px;
+  grid-template-columns:2fr 1fr 1fr;
+  grid-template-rows:220px 220px;
+  gap:12px;
 }
 
 .gallery-item{
-  position:relative;
   overflow:hidden;
-  border-radius:18px;
-  background:#ddd6c9;
+  border-radius:6px;
 }
 
 .gallery-item:first-child{
   grid-row:span 2;
 }
 
-.gallery-item img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform .7s ease;
-}
-
-.gallery-item:hover img{
-  transform:scale(1.05);
-}
-
-.gallery-caption{
-  position:absolute;
-  left:18px;
-  bottom:18px;
-  padding:8px 12px;
-  background:rgba(17,38,30,.82);
-  color:white;
-  border-radius:999px;
-  font-size:10px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-/* =========================
-   LOCATION
-========================= */
+/* LOCATION */
 
 .location{
-  padding:110px 0;
-  background:var(--cream);
+  padding:90px 0;
+  background:#eee9df;
 }
 
 .location-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:50px;
-  align-items:stretch;
+  align-items:center;
 }
 
-.location-copy{
-  background:white;
-  padding:50px;
-  border-radius:24px;
-}
-
-.location-copy h2{
+.location h2{
   font-family:"Playfair Display",serif;
-  font-size:48px;
-  line-height:1;
-  font-weight:500;
-}
-
-.address{
-  margin-top:25px;
-  color:var(--muted);
-  line-height:1.8;
-  font-size:14px;
-}
-
-.location-list{
-  margin-top:32px;
-  display:grid;
-  gap:15px;
-}
-
-.location-row{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  padding-bottom:15px;
-  border-bottom:1px solid var(--border);
-  font-size:13px;
-}
-
-.location-row span:first-child{
-  color:var(--muted);
-}
-
-.location-row strong{
-  font-weight:600;
-  text-align:right;
-}
-
-.map-card{
-  min-height:500px;
-  border-radius:24px;
-  overflow:hidden;
-  position:relative;
-  background:
-    linear-gradient(rgba(24,63,50,.08),rgba(24,63,50,.08)),
-    #dcd8cf;
-}
-
-.map-pattern{
-  position:absolute;
-  inset:0;
-  opacity:.5;
-  background-image:
-    linear-gradient(90deg,rgba(24,63,50,.08) 1px,transparent 1px),
-    linear-gradient(rgba(24,63,50,.08) 1px,transparent 1px);
-  background-size:45px 45px;
-}
-
-.map-pin{
-  position:absolute;
-  left:50%;
-  top:48%;
-  transform:translate(-50%,-50%);
-  width:72px;
-  height:72px;
-  border-radius:50%;
-  background:var(--green);
-  color:white;
-  display:grid;
-  place-items:center;
-  box-shadow:0 15px 40px rgba(24,63,50,.25);
-}
-
-.map-pin::after{
-  content:"";
-  position:absolute;
-  width:20px;
-  height:20px;
-  border-radius:50%;
-  background:var(--gold-light);
-}
-
-.map-card-content{
-  position:absolute;
-  left:24px;
-  right:24px;
-  bottom:24px;
-  padding:22px;
-  background:rgba(255,255,255,.93);
-  backdrop-filter:blur(10px);
-  border-radius:18px;
-}
-
-.map-card-content strong{
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:20px;
-  margin-bottom:5px;
-}
-
-.map-card-content span{
-  color:var(--muted);
-  font-size:12px;
-}
-
-.map-btn{
-  display:inline-flex;
-  margin-top:15px;
-  padding:10px 15px;
-  border-radius:999px;
-  background:var(--green);
-  color:white;
-  font-size:11px;
-  font-weight:600;
-}
-
-/* =========================
-   REVIEWS
-========================= */
-
-.reviews{
-  padding:110px 0;
-  background:white;
-}
-
-.review-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:30px;
-}
-
-.review-rating{
-  text-align:right;
-}
-
-.review-rating strong{
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:58px;
-  font-weight:500;
-  line-height:1;
-}
-
-.review-rating span{
-  color:var(--muted);
-  font-size:11px;
-}
-
-.review-grid{
-  margin-top:50px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.review-card{
-  padding:30px;
-  border:1px solid var(--border);
-  border-radius:20px;
-}
-
-.stars{
-  color:var(--gold);
-  letter-spacing:3px;
-  font-size:13px;
-}
-
-.review-card p{
-  margin-top:20px;
-  color:#5e625d;
-  font-size:13px;
-  line-height:1.85;
-}
-
-.review-author{
-  margin-top:25px;
-  font-size:12px;
-  font-weight:700;
-}
-
-.review-source{
-  margin-top:3px;
-  color:var(--muted);
-  font-size:10px;
-}
-
-/* =========================
-   STAY INFO
-========================= */
-
-.stay{
-  padding:90px 0;
-  background:var(--cream);
-}
-
-.stay-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  border-top:1px solid var(--border);
-  border-left:1px solid var(--border);
-}
-
-.stay-item{
-  padding:30px;
-  min-height:150px;
-  border-right:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-}
-
-.stay-item span{
-  display:block;
-  color:var(--gold);
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.12em;
-  font-weight:700;
-  margin-bottom:14px;
-}
-
-.stay-item strong{
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:24px;
-  font-weight:500;
-}
-
-.stay-item p{
-  margin-top:7px;
-  color:var(--muted);
-  font-size:11px;
-  line-height:1.6;
-}
-
-/* =========================
-   CTA
-========================= */
-
-.cta{
-  position:relative;
-  padding:120px 0;
-  background:var(--green-dark);
-  color:white;
-  overflow:hidden;
-}
-
-.cta::before{
-  content:"";
-  position:absolute;
-  width:450px;
-  height:450px;
-  border:1px solid rgba(213,180,119,.16);
-  border-radius:50%;
-  right:-130px;
-  top:-180px;
-}
-
-.cta-inner{
-  position:relative;
-  text-align:center;
-  max-width:750px;
-  margin:auto;
-}
-
-.cta .section-label{
-  color:var(--gold-light);
-}
-
-.cta h2{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(42px,6vw,70px);
-  line-height:1;
-  font-weight:500;
-}
-
-.cta p{
-  max-width:560px;
-  margin:22px auto 0;
-  color:rgba(255,255,255,.65);
-  font-size:14px;
-  line-height:1.8;
-}
-
-.cta-actions{
-  margin-top:32px;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:#0c201a;
-  color:white;
-  padding:65px 0 30px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr;
-  gap:60px;
-  padding-bottom:50px;
-  border-bottom:1px solid rgba(255,255,255,.1);
-}
-
-.footer-brand p{
-  margin-top:18px;
-  max-width:380px;
-  color:rgba(255,255,255,.52);
-  font-size:12px;
-  line-height:1.8;
-}
-
-.footer-column h4{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.15em;
-  color:var(--gold-light);
+  font-size:42px;
+  color:var(--green);
   margin-bottom:18px;
 }
 
-.footer-column a,
-.footer-column p{
-  display:block;
-  margin-bottom:10px;
-  color:rgba(255,255,255,.6);
-  font-size:12px;
-  line-height:1.7;
+.address{
+  color:var(--muted);
+  margin-bottom:25px;
 }
 
-.footer-column a:hover{
+.map-card{
+  min-height:330px;
+  border-radius:10px;
+  background:
+    linear-gradient(rgba(23,63,50,.75),rgba(23,63,50,.75)),
+    url("images/exterior.jpg") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   color:white;
+  text-align:center;
+  padding:30px;
 }
 
-.footer-bottom{
-  padding-top:25px;
+.map-card h3{
+  font-family:"Playfair Display",serif;
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.map-card p{
+  opacity:.8;
+  margin-bottom:20px;
+}
+
+.map-btn{
+  display:inline-block;
+  background:white;
+  color:var(--green);
+  padding:12px 18px;
+  border-radius:5px;
+  font-weight:600;
+}
+
+/* CONTACT */
+
+.contact{
+  padding:90px 0;
+  text-align:center;
+}
+
+.contact h2{
+  font-family:"Playfair Display",serif;
+  font-size:44px;
+  color:var(--green);
+  margin-bottom:15px;
+}
+
+.contact p{
+  color:var(--muted);
+  margin-bottom:25px;
+}
+
+.contact-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.contact-btn{
+  background:var(--green);
+  color:white;
+  padding:14px 24px;
+  border-radius:5px;
+  font-weight:600;
+}
+
+.contact-btn.alt{
+  background:white;
+  color:var(--green);
+  border:1px solid #ddd;
+}
+
+/* FOOTER */
+
+footer{
+  background:#102c24;
+  color:white;
+  padding:45px 0;
+}
+
+.footer-inner{
   display:flex;
   justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+footer p{
+  color:rgba(255,255,255,.6);
+  font-size:13px;
+  margin-top:7px;
+}
+
+.footer-links{
+  display:flex;
   gap:20px;
-  color:rgba(255,255,255,.38);
-  font-size:10px;
+  font-size:13px;
 }
 
-/* =========================
-   FLOATING CALL
-========================= */
+/* MOBILE */
 
-.call-float{
-  position:fixed;
-  z-index:50;
-  right:20px;
-  bottom:20px;
-  width:54px;
-  height:54px;
-  border-radius:50%;
-  background:var(--gold);
-  color:var(--green-dark);
-  display:grid;
-  place-items:center;
-  box-shadow:0 12px 30px rgba(0,0,0,.2);
-  font-size:20px;
-}
-
-/* =========================
-   REVEAL
-========================= */
-
-.reveal{
-  opacity:0;
-  transform:translateY(25px);
-  transition:opacity .8s ease,transform .8s ease;
-}
-
-.reveal.visible{
-  opacity:1;
-  transform:none;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:900px){
+@media(max-width:800px){
 
   .nav-links{
-    position:absolute;
-    top:80px;
-    left:20px;
-    right:20px;
-    padding:20px;
-    border-radius:18px;
-    background:rgba(15,39,31,.96);
-    backdrop-filter:blur(15px);
     display:none;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .nav-links.open{
-    display:flex;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .nav-book{
-    border:0;
-    padding:0;
-  }
-
-  .intro-grid,
-  .location-grid{
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  .rooms-grid{
-    grid-template-columns:1fr;
-  }
-
-  .amenities-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .review-grid{
-    grid-template-columns:1fr;
-  }
-
-  .stay-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .gallery-grid{
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:230px 230px 230px;
-  }
-
-  .gallery-item:first-child{
-    grid-column:span 2;
-    grid-row:span 1;
-  }
-
-}
-
-@media(max-width:600px){
-
-  .container{
-    width:min(100% - 28px,1180px);
-  }
-
-  .navbar{
-    background:linear-gradient(
-      rgba(10,29,23,.4),
-      transparent
-    );
-  }
-
-  .nav-inner{
-    min-height:76px;
-  }
-
-  .logo-text strong{
-    font-size:17px;
-  }
-
-  .logo-text span{
-    font-size:8px;
   }
 
   .hero{
-    min-height:680px;
-  }
-
-  .hero-content{
-    padding-bottom:115px;
+    min-height:650px;
   }
 
   .hero h1{
-    font-size:55px;
+    font-size:52px;
   }
 
-  .hero-description{
-    font-size:14px;
-    line-height:1.7;
-  }
-
-  .hero-actions{
-    display:grid;
+  .room-grid{
     grid-template-columns:1fr;
   }
 
-  .btn{
-    width:100%;
+  .about-grid,
+  .location-grid{
+    grid-template-columns:1fr;
   }
 
-  .hero-info{
-    min-height:95px;
-    flex-wrap:wrap;
-    align-content:center;
-    gap:8px 20px;
-  }
-
-  .hero-info-item{
-    font-size:10px;
-  }
-
-  .intro,
-  .rooms,
-  .amenities,
-  .gallery,
-  .location,
-  .reviews{
-    padding:80px 0;
-  }
-
-  .intro h2,
-  .section-heading h2{
-    font-size:42px;
-  }
-
-  .section-heading{
-    display:block;
-    margin-bottom:35px;
-  }
-
-  .section-heading p{
-    margin-top:20px;
-  }
-
-  .room-image{
-    height:270px;
-  }
-
-  .amenities-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .amenity{
-    min-height:145px;
-    padding:20px;
+  .about-img{
+    height:350px;
   }
 
   .gallery-grid{
-    display:grid;
     grid-template-columns:1fr 1fr;
     grid-template-rows:180px 180px 180px;
   }
 
   .gallery-item:first-child{
-    grid-column:span 2;
+    grid-row:span 2;
   }
 
-  .gallery-caption{
-    left:10px;
-    bottom:10px;
-    font-size:8px;
-  }
-
-  .location-copy{
-    padding:30px 24px;
-  }
-
-  .location-copy h2{
-    font-size:40px;
-  }
-
-  .map-card{
-    min-height:390px;
-  }
-
-  .review-top{
-    display:block;
-  }
-
-  .review-rating{
-    text-align:left;
-    margin-top:25px;
-  }
-
-  .stay-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .stay-item{
-    padding:22px 17px;
-  }
-
-  .stay-item strong{
-    font-size:20px;
-  }
-
-  .footer-grid{
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  .footer-bottom{
-    display:block;
-  }
-
-  .footer-bottom span{
-    display:block;
-    margin-top:8px;
+  .intro,
+  .rooms,
+  .about,
+  .gallery,
+  .location,
+  .contact{
+    padding-top:70px;
+    padding-bottom:70px;
   }
 
 }
@@ -1254,100 +516,328 @@ footer{
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAV -->
 
-<header class="navbar">
-
+<nav>
   <div class="container nav-inner">
 
     <a href="#" class="logo">
-
-      <div class="logo-mark">
-        BI
-      </div>
-
-      <div class="logo-text">
-        <strong>Balaji Inn</strong>
-        <span>Bhopal</span>
-      </div>
-
+      Hotel Balaji Inn
+      <span>Bhopal · Madhya Pradesh</span>
     </a>
 
-    <nav class="nav-links" id="navLinks">
-
+    <div class="nav-links">
       <a href="#rooms">Rooms</a>
-      <a href="#amenities">Amenities</a>
+      <a href="#about">About</a>
       <a href="#gallery">Gallery</a>
       <a href="#location">Location</a>
-      <a href="#reviews">Reviews</a>
-
-      <a
-        href="tel:+919111000356"
-        class="nav-book"
-      >
-        Call Hotel
-      </a>
-
-    </nav>
-
-    <button
-      class="menu-btn"
-      id="menuBtn"
-      aria-label="Open menu"
-    >
-      ☰
-    </button>
+      <a href="tel:+919111000356" class="nav-btn">Call Now</a>
+    </div>
 
   </div>
+</nav>
 
-</header>
 
-
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
-  <div class="hero-image"></div>
+  <div class="hero-bg"></div>
 
-  <div class="hero-content">
+  <div class="container hero-content">
 
-    <div class="container">
+    <div class="eyebrow">
+      Ayodhya Bypass · Bhopal
+    </div>
 
-      <div class="eyebrow">
-        Ayodhya Bypass · Bhopal
+    <h1>
+      A comfortable stay in Bhopal.
+    </h1>
+
+    <p>
+      Welcome to Hotel Balaji Inn — comfortable rooms,
+      convenient location and thoughtful essentials for
+      business and leisure stays.
+    </p>
+
+    <div class="buttons">
+
+      <a href="tel:+919111000356" class="btn btn-primary">
+        Call to Book
+      </a>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Balaji+Inn+Ayodhya+Bypass+Bhopal"
+         target="_blank"
+         class="btn btn-outline">
+        Get Directions
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+  <div class="container">
+
+    <div class="section-label">Welcome</div>
+
+    <h2>Stay easy. Stay comfortable.</h2>
+
+    <p>
+      Located on Ayodhya Bypass in Bhopal, Hotel Balaji Inn
+      offers air-conditioned rooms, complimentary Wi-Fi,
+      parking and room service in a convenient city location.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ROOMS -->
+
+<section class="rooms" id="rooms">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-label">Accommodation</div>
+      <h2>Rooms for every stay.</h2>
+      <p>Comfortable spaces designed for a relaxed stay.</p>
+    </div>
+
+
+    <div class="room-grid">
+
+      <article class="room">
+
+        <div class="room-img">
+          <img src="images/room-classic.jpg"
+               alt="Classic Room at Hotel Balaji Inn">
+        </div>
+
+        <div class="room-body">
+
+          <h3>Classic Room</h3>
+
+          <p>
+            A comfortable room with the essentials
+            for a convenient stay.
+          </p>
+
+          <div class="features">
+            <span>AC</span>
+            <span>King Bed</span>
+            <span>TV</span>
+            <span>Wi-Fi</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="room">
+
+        <div class="room-img">
+          <img src="images/room-deluxe.jpg"
+               alt="Deluxe Room at Hotel Balaji Inn">
+        </div>
+
+        <div class="room-body">
+
+          <h3>Deluxe Room</h3>
+
+          <p>
+            More space and comfort for a relaxed
+            Bhopal stay.
+          </p>
+
+          <div class="features">
+            <span>AC</span>
+            <span>King Bed</span>
+            <span>TV</span>
+            <span>Private Bath</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="room">
+
+        <div class="room-img">
+          <img src="images/room-executive.jpg"
+               alt="Executive Room at Hotel Balaji Inn">
+        </div>
+
+        <div class="room-body">
+
+          <h3>Executive Room</h3>
+
+          <p>
+            A spacious option suited to business
+            and longer stays.
+          </p>
+
+          <div class="features">
+            <span>AC</span>
+            <span>King Bed</span>
+            <span>Wi-Fi</span>
+            <span>Work Desk</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="container about-grid">
+
+    <div class="about-img">
+      <img src="images/lobby.jpg"
+           alt="Hotel Balaji Inn lobby">
+    </div>
+
+    <div>
+
+      <div class="section-label">
+        Hotel Balaji Inn
       </div>
 
-      <h1>
-        Stay comfortably.
-        <span>Feel at home.</span>
-      </h1>
+      <h2>Everything you need for an easy stay.</h2>
 
-      <p class="hero-description">
-        A comfortable city stay at Hotel Balaji Inn,
-        with air-conditioned rooms, modern essentials,
-        complimentary Wi-Fi and convenient access to
-        Ayodhya Bypass and Minal Gate.
+      <p>
+        From air-conditioned rooms and Wi-Fi to parking,
+        room service and everyday conveniences, Balaji Inn
+        is designed to keep your stay simple and comfortable.
       </p>
 
-      <div class="hero-actions">
+      <div class="about-list">
+
+        <div>✓ Free Wi-Fi</div>
+        <div>✓ Air Conditioning</div>
+        <div>✓ Free Parking</div>
+        <div>✓ 24h Room Service</div>
+        <div>✓ Power Backup</div>
+        <div>✓ 24h Front Desk</div>
+        <div>✓ Security / CCTV</div>
+        <div>✓ Hot Water</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-label">Gallery</div>
+      <h2>Inside Balaji Inn.</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="images/exterior.jpg"
+             alt="Hotel Balaji Inn exterior">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/reception.jpg"
+             alt="Hotel Balaji Inn reception">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/room-classic.jpg"
+             alt="Hotel Balaji Inn room">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/room-deluxe.jpg"
+             alt="Hotel Balaji Inn deluxe room">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/room-executive.jpg"
+             alt="Hotel Balaji Inn executive room">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section class="location" id="location">
+
+  <div class="container location-grid">
+
+    <div>
+
+      <div class="section-label">Find Us</div>
+
+      <h2>Conveniently located in Bhopal.</h2>
+
+      <p class="address">
+        Shri Balaji Marg, Plot-68,<br>
+        Amrit Enclave, Narela Shankari,<br>
+        Ayodhya Bypass Road, Bhopal,<br>
+        Madhya Pradesh 462041
+      </p>
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Hotel+Balaji+Inn+Ayodhya+Bypass+Bhopal"
+        target="_blank"
+        class="contact-btn">
+        Open in Google Maps
+      </a>
+
+    </div>
+
+
+    <div class="map-card">
+
+      <div>
+
+        <h3>Hotel Balaji Inn</h3>
+
+        <p>
+          Ayodhya Bypass · Near Minal Gate No. 2
+        </p>
 
         <a
-          href="tel:+919111000356"
-          class="btn btn-primary"
-        >
-          Call to Book
-        </a>
-
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=HOTEL+BALAJI+INN+Bhopal"
+          href="https://www.google.com/maps/search/?api=1&query=Hotel+Balaji+Inn+Ayodhya+Bypass+Bhopal"
           target="_blank"
-          rel="noopener"
-          class="btn btn-outline"
-        >
+          class="map-btn">
           Get Directions
         </a>
 
@@ -1357,313 +847,34 @@ footer{
 
   </div>
 
-
-  <div class="hero-bottom">
-
-    <div class="container hero-info">
-
-      <div class="hero-info-item">
-        <strong>AC Rooms</strong>
-        <span>All rooms</span>
-      </div>
-
-      <div class="hero-info-item">
-        <strong>Free Wi-Fi</strong>
-        <span>High-speed</span>
-      </div>
-
-      <div class="hero-info-item">
-        <strong>Parking</strong>
-        <span>Private</span>
-      </div>
-
-      <div class="hero-info-item">
-        <strong>24h Service</strong>
-        <span>Room service</span>
-      </div>
-
-    </div>
-
-  </div>
-
 </section>
 
 
-<!-- =========================
-     INTRO
-========================= -->
+<!-- CONTACT -->
 
-<section class="intro reveal">
-
-  <div class="container intro-grid">
-
-    <div>
-
-      <div class="section-label">
-        Welcome to Balaji Inn
-      </div>
-
-      <h2>
-        A simple stay,
-        <br>
-        thoughtfully done.
-      </h2>
-
-    </div>
-
-
-    <div class="intro-copy">
-
-      <p>
-        Hotel Balaji Inn is located on Shri Balaji Marg,
-        just off Ayodhya Bypass in Bhopal. The property
-        combines practical room comforts with an easy,
-        convenient location for business and leisure stays.
-      </p>
-
-      <p>
-        Rooms are air-conditioned and equipped with
-        flat-screen TVs, writing desks, seating or dining
-        areas, refrigerators and private bathrooms.
-      </p>
-
-      <div class="intro-card">
-
-        <strong>
-          Near Minal Gate No. 2
-        </strong>
-
-        <span>
-          Convenient access to Ayodhya Bypass,
-          local shopping and major city routes.
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     ROOMS
-========================= -->
-
-<section class="rooms" id="rooms">
+<section class="contact">
 
   <div class="container">
 
-    <div class="section-heading reveal">
+    <div class="section-label">Reservations</div>
 
-      <div>
+    <h2>Planning your stay?</h2>
 
-        <div class="section-label">
-          Rooms & Suites
-        </div>
+    <p>
+      Call the hotel directly for bookings and enquiries.
+    </p>
 
-        <h2>
-          Find your room.
-        </h2>
+    <div class="contact-buttons">
 
-      </div>
+      <a href="tel:+919111000356" class="contact-btn">
+        +91 91110 00356
+      </a>
 
-      <p>
-        Choose from comfortable room categories designed
-        for short stays, business trips and relaxed visits
-        to Bhopal.
-      </p>
-
-    </div>
-
-
-    <div class="rooms-grid">
-
-
-      <!-- CLASSIC ROOM -->
-
-      <article class="room-card reveal">
-
-        <div class="room-image">
-
-          <img
-            src="images/room-1.jpg"
-            alt="Hotel Balaji Inn Classic Room"
-            loading="lazy"
-          >
-
-          <span class="room-tag">
-            Classic
-          </span>
-
-        </div>
-
-
-        <div class="room-body">
-
-          <h3>
-            Classic Room
-          </h3>
-
-          <p>
-            A comfortable room for everyday stays,
-            with a double bed, air conditioning and
-            practical work and storage space.
-          </p>
-
-          <div class="room-features">
-
-            <span>AC</span>
-            <span>32" TV</span>
-            <span>Wi-Fi</span>
-            <span>Private Bath</span>
-            <span>Hot Water</span>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- DELUXE ROOM -->
-
-      <article class="room-card reveal">
-
-        <div class="room-image">
-
-          <img
-            src="images/room-2.jpg"
-            alt="Hotel Balaji Inn Deluxe Room"
-            loading="lazy"
-          >
-
-          <span class="room-tag">
-            Deluxe
-          </span>
-
-        </div>
-
-
-        <div class="room-body">
-
-          <h3>
-            Deluxe Room
-          </h3>
-
-          <p>
-            A spacious option with a comfortable bed
-            and additional seating, created for guests
-            looking for a little more room to relax.
-          </p>
-
-          <div class="room-features">
-
-            <span>AC</span>
-            <span>32" TV</span>
-            <span>Wi-Fi</span>
-            <span>Refrigerator</span>
-            <span>Private Bath</span>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- EXECUTIVE ROOM -->
-
-      <article class="room-card reveal">
-
-        <div class="room-image">
-
-          <img
-            src="images/room-3.jpg"
-            alt="Hotel Balaji Inn Executive Room"
-            loading="lazy"
-          >
-
-          <span class="room-tag">
-            Executive
-          </span>
-
-        </div>
-
-
-        <div class="room-body">
-
-          <h3>
-            Executive Room
-          </h3>
-
-          <p>
-            A larger room category suited to guests
-            who want additional space, comfort and
-            a more relaxed stay.
-          </p>
-
-          <div class="room-features">
-
-            <span>AC</span>
-            <span>King Bed</span>
-            <span>TV</span>
-            <span>Work Desk</span>
-            <span>Wi-Fi</span>
-
-          </div>
-
-        </div>
-
-      </article>
-
-
-      <!-- SUITE ROOM -->
-
-      <article class="room-card reveal">
-
-        <div class="room-image">
-
-          <img
-            src="images/room-4.jpg"
-            alt="Hotel Balaji Inn Suite Room"
-            loading="lazy"
-          >
-
-          <span class="room-tag">
-            Suite
-          </span>
-
-        </div>
-
-
-        <div class="room-body">
-
-          <h3>
-            Suite Room
-          </h3>
-
-          <p>
-            A more spacious stay with a separate
-            seating area, suitable for guests who
-            prefer extra room during their visit.
-          </p>
-
-          <div class="room-features">
-
-            <span>AC</span>
-            <span>King Bed</span>
-            <span>TV</span>
-            <span>Seating Area</span>
-            <span>Wi-Fi</span>
-
-          </div>
-
-        </div>
-
-      </article>
-
+      <a href="https://wa.me/919111000356"
+         target="_blank"
+         class="contact-btn alt">
+        WhatsApp
+      </a>
 
     </div>
 
@@ -1672,1275 +883,37 @@ footer{
 </section>
 
 
-<!-- =========================
-     AMENITIES
-========================= -->
-
-<section class="amenities" id="amenities">
-
-  <div class="container">
-
-    <div class="amenities-head reveal">
-
-      <div class="section-label">
-        Everything you need
-      </div>
-
-      <h2>
-        Comfort without
-        the complication.
-      </h2>
-
-      <p class="amenities-intro">
-        Practical hotel facilities designed to make
-        your stay easy, comfortable and connected.
-      </p>
-
-    </div>
-
-
-    <div class="amenities-grid">
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          01
-        </div>
-
-        <h3>
-          Air Conditioning
-        </h3>
-
-        <p>
-          Stay comfortable throughout the day and night.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          02
-        </div>
-
-        <h3>
-          Free Wi-Fi
-        </h3>
-
-        <p>
-          Complimentary high-speed internet access.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          03
-        </div>
-
-        <h3>
-          24h Room Service
-        </h3>
-
-        <p>
-          Convenient service available around the clock.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          04
-        </div>
-
-        <h3>
-          Private Parking
-        </h3>
-
-        <p>
-          Free private parking available for hotel guests.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          05
-        </div>
-
-        <h3>
-          Restaurant
-        </h3>
-
-        <p>
-          North and South Indian plus Continental food options.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          06
-        </div>
-
-        <h3>
-          Power Backup
-        </h3>
-
-        <p>
-          Backup power for a more reliable stay.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          07
-        </div>
-
-        <h3>
-          24h Front Desk
-        </h3>
-
-        <p>
-          Assistance available whenever you need it.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          08
-        </div>
-
-        <h3>
-          Laundry Service
-        </h3>
-
-        <p>
-          Laundry and dry-cleaning assistance available.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          09
-        </div>
-
-        <h3>
-          Elevator
-        </h3>
-
-        <p>
-          Convenient access between hotel floors.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          10
-        </div>
-
-        <h3>
-          CCTV Security
-        </h3>
-
-        <p>
-          Security monitoring throughout the property.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          11
-        </div>
-
-        <h3>
-          Doctor on Call
-        </h3>
-
-        <p>
-          Medical assistance can be arranged when required.
-        </p>
-
-      </div>
-
-
-      <div class="amenity reveal">
-
-        <div class="amenity-number">
-          12
-        </div>
-
-        <h3>
-          Luggage Assistance
-        </h3>
-
-        <p>
-          Luggage assistance and storage available.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-<!-- =========================
-     GALLERY
-========================= -->
-
-<section class="gallery" id="gallery">
-
-  <div class="container">
-
-    <div class="section-heading reveal">
-
-      <div>
-
-        <div class="section-label">
-          Inside Balaji Inn
-        </div>
-
-        <h2>
-          See the stay.
-        </h2>
-
-      </div>
-
-      <p>
-        Take a look at the rooms, property,
-        common spaces and dining experience.
-      </p>
-
-    </div>
-
-
-    <div class="gallery-grid">
-
-
-      <div class="gallery-item reveal">
-
-        <img
-          src="images/exterior.jpg"
-          alt="Hotel Balaji Inn exterior"
-          loading="lazy"
-        >
-
-        <span class="gallery-caption">
-          Exterior
-        </span>
-
-      </div>
-
-
-      <div class="gallery-item reveal">
-
-        <img
-          src="images/lobby.jpg"
-          alt="Hotel Balaji Inn lobby"
-          loading="lazy"
-        >
-
-        <span class="gallery-caption">
-          Lobby
-        </span>
-
-      </div>
-
-
-      <div class="gallery-item reveal">
-
-        <img
-          src="images/room-1.jpg"
-          alt="Hotel Balaji Inn room"
-          loading="lazy"
-        >
-
-        <span class="gallery-caption">
-          Rooms
-        </span>
-
-      </div>
-
-
-      <div class="gallery-item reveal">
-
-        <img
-          src="images/room-2.jpg"
-          alt="Hotel Balaji Inn bedroom"
-          loading="lazy"
-        >
-
-        <span class="gallery-caption">
-          Stay
-        </span>
-
-      </div>
-
-
-      <div class="gallery-item reveal">
-
-        <img
-          src="images/food.jpg"
-          alt="Food at Hotel Balaji Inn"
-          loading="lazy"
-        >
-
-        <span class="gallery-caption">
-          Dining
-        </span>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     LOCATION
-========================= -->
-
-<section class="location" id="location">
-
-  <div class="container">
-
-    <div class="location-grid">
-
-
-      <div class="location-copy reveal">
-
-        <div class="section-label">
-          Find us
-        </div>
-
-        <h2>
-          Right on
-          <br>
-          Ayodhya Bypass.
-        </h2>
-
-
-        <p class="address">
-          Shri Balaji Marg, Plot-68,
-          Amrit Enclave, Narela Shankari,
-          Ayodhya Bypass Road,
-          ISRO Colony, Ayodhya Nagar,
-          Bhopal, Madhya Pradesh 462041.
-        </p>
-
-
-        <div class="location-list">
-
-
-          <div class="location-row">
-
-            <span>
-              Landmark
-            </span>
-
-            <strong>
-              Near Minal Gate No. 2
-            </strong>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <span>
-              Airport
-            </span>
-
-            <strong>
-              ~13.5 km
-            </strong>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <span>
-              Phone
-            </span>
-
-            <strong>
-              +91 91110 00356
-            </strong>
-
-          </div>
-
-
-          <div class="location-row">
-
-            <span>
-              Alternate
-            </span>
-
-            <strong>
-              +91 91110 00245
-            </strong>
-
-          </div>
-
-
-        </div>
-
-
-        <a
-          href="https://www.google.com/maps/search/?api=1&query=HOTEL+BALAJI+INN+Shri+Balaji+Marg+Bhopal"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary"
-          style="margin-top:30px;"
-        >
-          Open in Google Maps
-        </a>
-
-      </div>
-
-
-      <div class="map-card reveal">
-
-        <div class="map-pattern"></div>
-
-        <div class="map-pin">
-          <span></span>
-        </div>
-
-
-        <div class="map-card-content">
-
-          <strong>
-            Hotel Balaji Inn
-          </strong>
-
-          <span>
-            Shri Balaji Marg · Ayodhya Bypass · Bhopal
-          </span>
-
-          <br>
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=HOTEL+BALAJI+INN+Shri+Balaji+Marg+Bhopal"
-            target="_blank"
-            rel="noopener"
-            class="map-btn"
-          >
-            Get Directions →
-          </a>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     REVIEWS
-========================= -->
-
-<section class="reviews" id="reviews">
-
-  <div class="container">
-
-
-    <div class="review-top reveal">
-
-      <div>
-
-        <div class="section-label">
-          Guest experience
-        </div>
-
-        <h2 class="section-heading" style="margin:0;">
-
-          <span style="
-            font-family:'Playfair Display',serif;
-            font-size:clamp(40px,5vw,60px);
-            font-weight:500;
-            line-height:1;
-          ">
-            What guests say.
-          </span>
-
-        </h2>
-
-      </div>
-
-
-      <div class="review-rating">
-
-        <strong>
-          4.9
-        </strong>
-
-        <span>
-          Google guest rating
-        </span>
-
-      </div>
-
-    </div>
-
-
-    <div class="review-grid">
-
-
-      <article class="review-card reveal">
-
-        <div class="stars">
-          ★★★★★
-        </div>
-
-        <p>
-          Comfortable rooms, helpful service and a
-          convenient location on Ayodhya Bypass.
-        </p>
-
-        <div class="review-author">
-          Guest review
-        </div>
-
-        <div class="review-source">
-          Google
-        </div>
-
-      </article>
-
-
-      <article class="review-card reveal">
-
-        <div class="stars">
-          ★★★★★
-        </div>
-
-        <p>
-          A practical stay with clean rooms, useful
-          amenities and easy access to the surrounding
-          area.
-        </p>
-
-        <div class="review-author">
-          Guest review
-        </div>
-
-        <div class="review-source">
-          Google
-        </div>
-
-      </article>
-
-
-      <article class="review-card reveal">
-
-        <div class="stars">
-          ★★★★★
-        </div>
-
-        <p>
-          Guests appreciate the room comfort,
-          hospitality and overall convenience of
-          the property.
-        </p>
-
-        <div class="review-author">
-          Guest review
-        </div>
-
-        <div class="review-source">
-          Google
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     STAY INFORMATION
-========================= -->
-
-<section class="stay">
-
-  <div class="container">
-
-    <div class="stay-grid">
-
-
-      <div class="stay-item reveal">
-
-        <span>
-          Check-in
-        </span>
-
-        <strong>
-          11:00 AM
-        </strong>
-
-        <p>
-          Check-in available until 11:00 PM.
-        </p>
-
-      </div>
-
-
-      <div class="stay-item reveal">
-
-        <span>
-          Check-out
-        </span>
-
-        <strong>
-          10:00 AM
-        </strong>
-
-        <p>
-          Check-out window extends to 10:30 AM.
-        </p>
-
-      </div>
-
-
-      <div class="stay-item reveal">
-
-        <span>
-          Internet
-        </span>
-
-        <strong>
-          Free Wi-Fi
-        </strong>
-
-        <p>
-          Complimentary Wi-Fi available for guests.
-        </p>
-
-      </div>
-
-
-      <div class="stay-item reveal">
-
-        <span>
-          Parking
-        </span>
-
-        <strong>
-          Free
-        </strong>
-
-        <p>
-          Private parking is available on site.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT CTA
-========================= -->
-
-<section class="cta">
-
-  <div class="container">
-
-    <div class="cta-inner reveal">
-
-      <div class="section-label">
-        Plan your stay
-      </div>
-
-      <h2>
-        Your room is
-        waiting.
-      </h2>
-
-      <p>
-        For room availability, current rates and
-        reservations, contact Hotel Balaji Inn directly.
-      </p>
-
-
-      <div class="cta-actions">
-
-        <a
-          href="tel:+919111000356"
-          class="btn btn-primary"
-        >
-          Call +91 91110 00356
-        </a>
-
-
-        <a
-          href="https://wa.me/919111000356"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-outline"
-        >
-          WhatsApp Hotel
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-  <div class="container">
+  <div class="container footer-inner">
 
+    <div>
 
-    <div class="footer-grid">
-
-
-      <div class="footer-brand">
-
-        <a href="#" class="logo">
-
-          <div class="logo-mark">
-            BI
-          </div>
-
-          <div class="logo-text">
-
-            <strong>
-              Balaji Inn
-            </strong>
-
-            <span>
-              Bhopal
-            </span>
-
-          </div>
-
-        </a>
-
-
-        <p>
-          Hotel Balaji Inn, Ayodhya Bypass,
-          Bhopal — a comfortable and convenient
-          stay for business and leisure travellers.
-        </p>
-
+      <div class="logo">
+        Hotel Balaji Inn
       </div>
 
-
-      <div class="footer-column">
-
-        <h4>
-          Explore
-        </h4>
-
-        <a href="#rooms">
-          Rooms
-        </a>
-
-        <a href="#amenities">
-          Amenities
-        </a>
-
-        <a href="#gallery">
-          Gallery
-        </a>
-
-        <a href="#location">
-          Location
-        </a>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h4>
-          Contact
-        </h4>
-
-        <a href="tel:+919111000356">
-          +91 91110 00356
-        </a>
-
-        <a href="tel:+919111000245">
-          +91 91110 00245
-        </a>
-
-        <a
-          href="https://www.instagram.com/hotel_balaji_inn__/"
-          target="_blank"
-          rel="noopener"
-        >
-          Instagram
-        </a>
-
-        <p>
-          Ayodhya Bypass, Bhopal
-        </p>
-
-      </div>
-
+      <p>
+        Ayodhya Bypass · Bhopal
+      </p>
 
     </div>
 
 
-    <div class="footer-bottom">
+    <div class="footer-links">
 
-      <span>
-        © 2026 Hotel Balaji Inn. All rights reserved.
-      </span>
-
-      <span>
-        Shri Balaji Marg · Bhopal
-      </span>
+      <a href="#rooms">Rooms</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location</a>
+      <a href="tel:+919111000356">Call</a>
 
     </div>
-
 
   </div>
 
 </footer>
-
-
-<!-- =========================
-     FLOATING CALL BUTTON
-========================= -->
-
-<a
-  href="tel:+919111000356"
-  class="call-float"
-  aria-label="Call Hotel Balaji Inn"
->
-  ☎
-</a>
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
-
-if(menuBtn && navLinks){
-
-  menuBtn.addEventListener("click", () => {
-
-    navLinks.classList.toggle("open");
-
-  });
-
-
-  navLinks.querySelectorAll("a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-      navLinks.classList.remove("open");
-
-    });
-
-  });
-
-}
-
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const revealElements =
-  document.querySelectorAll(".reveal");
-
-
-const revealObserver =
-  new IntersectionObserver(
-
-    entries => {
-
-      entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-
-          entry.target.classList.add("visible");
-
-          revealObserver.unobserve(
-            entry.target
-          );
-
-        }
-
-      });
-
-    },
-
-    {
-      threshold:0.12
-    }
-
-  );
-
-
-revealElements.forEach(element => {
-
-  revealObserver.observe(element);
-
-});
-
-
-/* =========================
-   SMOOTH NAVIGATION
-========================= */
-
-document.querySelectorAll(
-  'a[href^="#"]'
-).forEach(link => {
-
-  link.addEventListener("click", function(event){
-
-    const targetId =
-      this.getAttribute("href");
-
-    if(targetId === "#"){
-      return;
-    }
-
-    const target =
-      document.querySelector(targetId);
-
-    if(target){
-
-      event.preventDefault();
-
-      target.scrollIntoView({
-        behavior:"smooth",
-        block:"start"
-      });
-
-    }
-
-  });
-
-});
-
-</script>
-<script>
-
-/* =========================
-   IMAGE FALLBACK SYSTEM
-========================= */
-
-document.querySelectorAll("img").forEach(img => {
-
-  img.addEventListener("error", function(){
-
-    this.style.display = "none";
-
-    const parent = this.parentElement;
-
-    if(parent && !parent.querySelector(".image-fallback")){
-
-      const fallback =
-        document.createElement("div");
-
-      fallback.className = "image-fallback";
-
-      fallback.innerHTML = `
-        <div>
-          <strong>Hotel Balaji Inn</strong>
-          <span>Photo coming soon</span>
-        </div>
-      `;
-
-      parent.appendChild(fallback);
-
-    }
-
-  });
-
-});
-
-
-/* =========================
-   HERO IMAGE FALLBACK
-========================= */
-
-const hero =
-  document.querySelector(".hero-image");
-
-if(hero){
-
-  const testImage =
-    new Image();
-
-  testImage.src =
-    "images/hero.jpg";
-
-  testImage.onerror = () => {
-
-    hero.style.backgroundImage =
-      "linear-gradient(135deg,#183f32,#102c24)";
-
-  };
-
-}
-
-
-/* =========================
-   CLOSE MENU WHEN
-   CLICKING OUTSIDE
-========================= */
-
-document.addEventListener("click", event => {
-
-  if(
-    navLinks &&
-    menuBtn &&
-    !navLinks.contains(event.target) &&
-    !menuBtn.contains(event.target)
-  ){
-
-    navLinks.classList.remove("open");
-
-  }
-
-});
-
-
-/* =========================
-   CURRENT YEAR
-========================= */
-
-const year =
-  document.querySelector(
-    ".footer-bottom span"
-  );
-
-if(year){
-
-  year.innerHTML =
-    `© ${new Date().getFullYear()} Hotel Balaji Inn. All rights reserved.`;
-
-}
-
-</script>
-
-
-<style>
-
-/* =========================
-   IMAGE FALLBACK
-========================= */
-
-.image-fallback{
-
-  position:absolute;
-
-  inset:0;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  text-align:center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #183f32,
-      #102c24
-    );
-
-  color:white;
-
-}
-
-
-.image-fallback div{
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:7px;
-
-}
-
-
-.image-fallback strong{
-
-  font-family:
-    "Playfair Display",
-    serif;
-
-  font-size:24px;
-
-  font-weight:500;
-
-}
-
-
-.image-fallback span{
-
-  color:
-    rgba(255,255,255,.55);
-
-  font-size:10px;
-
-  text-transform:uppercase;
-
-  letter-spacing:.16em;
-
-}
-
-
-/* =========================
-   IMAGE CONTAINER FIX
-========================= */
-
-.gallery-item,
-.room-image{
-
-  isolation:isolate;
-
-}
-
-
-.room-image .image-fallback,
-.gallery-item .image-fallback{
-
-  z-index:1;
-
-}
-
-
-.room-image img,
-.gallery-item img{
-
-  position:relative;
-
-  z-index:2;
-
-}
-
-
-.room-image .image-fallback,
-.gallery-item .image-fallback{
-
-  z-index:1;
-
-}
-
-
-/* =========================
-   HERO MOBILE FIX
-========================= */
-
-@media(max-width:600px){
-
-  .hero-image{
-
-    background-position:
-      center center;
-
-  }
-
-}
-
-
-/* =========================
-   TOUCH FEEDBACK
-========================= */
-
-.btn,
-.nav-book,
-.map-btn,
-.call-float{
-
-  -webkit-tap-highlight-color:
-    transparent;
-
-}
-
-
-/* =========================
-   ACCESSIBILITY
-========================= */
-
-a:focus-visible,
-button:focus-visible{
-
-  outline:
-    2px solid var(--gold-light);
-
-  outline-offset:
-    4px;
-
-}
-
-</style>
-
 
 </body>
 </html>
